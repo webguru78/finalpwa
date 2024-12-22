@@ -1,0 +1,21 @@
+{
+    "name": "BizKey",
+    "short_name": "BizKey",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2A3443",
+    "description": "BizKey application",
+    "theme_color": "#2A3443",
+    "icons": [
+      {
+        "src": "img/logo.jpeg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+      },
+  {
+        "src": "img/96X96.jpeg",
+        "sizes": "96x96",
+        "type": "image/jpeg"
+      }
+    ]
+  }
