@@ -6,24 +6,7 @@
         <title>Biz-Key Solution</title>
         <link rel="icon" href="img/2.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <!--  manifest  -->
-    <link rel="manifest" href="manifest.json">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/jpg" href="img/logo.jpeg" />
 
-    <meta name="theme-color" content="#2A3443" />
-    <meta name="description" content="Biz-Key web application" />
-
-    <!-- iOS -->
-    <link rel="apple-touch-icon" href="img/logo.jpeg" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-status-bar-style" content="black" />
-    <meta name="mobile-web-app-title" content="Carzone" />
-
-    <!-- manifest ends -->
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +29,23 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 
-    
+            <!-- Manifest File -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Theme Color (for mobile browsers) -->
+<meta name="theme-color" content="#007bff">
+
+<!-- Register Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch((error) => console.error("Service Worker Registration Failed:", error));
+  }
+</script>
+
+
     </head>
 
     <body>
@@ -360,6 +359,6 @@
         <script>
             AOS.init();
           </script>
-          <script src="app.js"></script>
+          <script src="service-worker.js"></script>
     </body>
 </html>
